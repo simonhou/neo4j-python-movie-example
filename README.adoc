@@ -1,0 +1,43 @@
+= Neo4j Movies Example Application - The Python Version
+
+本示例代码基于https://github.com/neo4j-examples/movies-python-py2neo-2.0进行修改，仅用于学习交流用。
+
+[source]
+----
+$ virtualenv cypher-app
+New python executable in cypher-app/bin/python
+Installing setuptools, pip...done.
+----
+
+[source]
+----
+$ source cypher-app/bin/activate
+----
+
+安装需要的py2neo包:
+
+[source]
+----
+(cypher-app)$ pip install -r requirements.txt
+...
+Successfully installed py2neo
+Cleaning up...
+----
+
+[source]
+----
+准备源数据，在neo4j中创建MOVIE和PERSON节点和关系，或者执行data.cql的CREATE语句。
+修改example.py中的IP，用户名和密码
+----
+
+And finally let's start up a Bottle web server:
+
+[source]
+----
+(cypher-app)$ python example.py
+Bottle v0.12.7 server starting up (using WSGIRefServer())...
+Listening on http://127.0.0.1:8080/
+Hit Ctrl-C to quit.
+----
+
+Navigate to http://localhost:8080 and you should see your first Neo4j application
